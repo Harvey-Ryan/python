@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10rem;
+        }
+        #container {
+            display: flex;
+            /* justify-content: space-evenly; */
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-left: 2rem;
+        }
+        .squares {
+            width: 15rem;
+            height: 15rem;
+            background-color: {{color}};
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<header>
+    <h1>Jinja Squares Playground!</h1>
+</header>
+<body>
+    <div id="container">
+        {% if num != null %}
+            {% for x in range(0,num) %}
+                <div class="squares"></div>
+            {% endfor %}
+            {% else %}
+                <div class="squares"></div>
+                <div class="squares"></div>
+                <div class="squares"></div>
+        {% endif %}
+    </div>
+</body>
+</html>

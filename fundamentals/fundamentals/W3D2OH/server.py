@@ -1,10 +1,10 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route("/<string:name>/<int:number>")
+def index(name,number):
+    return render_template("index.html", name=name, number=number)
 
 @app.route("/coding/dojo/rules")
 def hello():
