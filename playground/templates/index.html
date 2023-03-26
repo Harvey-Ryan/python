@@ -26,7 +26,7 @@
         .squares {
             width: 15rem;
             height: 15rem;
-            background-color: {{color}};
+            background-color: {{color}}; /* Checks for color imput in URL */
             border: 3px solid black;
         }
     </style>
@@ -36,15 +36,15 @@
 </header>
 <body>
     <div id="container">
-        {% if num != null %}
-            {% for x in range(0,num) %}
+        {% if num != null %} /* If number is given as argument in URL, runs loop. */
+            {% for x in range(0,num) %} /* First checks num value to initiate loop. If not found, moves to else statement. */
                 <div class="squares"></div>
-            {% endfor %}
-            {% else %}
+            {% endfor %} /* Ends loop. */
+            {% else %} /* Renders 3 blue squares */
                 <div class="squares"></div>
                 <div class="squares"></div>
                 <div class="squares"></div>
-        {% endif %}
+        {% endif %} /* Ends if/else. */
     </div>
 </body>
 </html>
